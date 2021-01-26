@@ -1,0 +1,64 @@
+<html>
+    <head> <title> if đa tầng</title></head>
+    <body>
+        Nhập chiều cao:
+        <input type="text" id="chieu_cao"> <br>
+        Nhâp cân nặng:
+        <input type="text" id="can_nang"></input><br><br>
+        <button style="font-size: small;background:aqua;" onclick="kiemtra()">xem</button> <br>
+
+        BMI: <span id= "B_M_I"></span> <br>
+        kết quả:<span id = "ket_qua"></span>
+        
+        <script>
+          
+            function kiemtra(){ 
+            let a = Number(100);
+            let chieucao = Number(document.getElementById("chieu_cao").value);
+            let cannang = Number(document.getElementById("can_nang").value);
+            let ketqua = document.getElementById("ket_qua");
+            let doi_cao = chieucao/a;
+            let bmi = cannang/(doi_cao*doi_cao);
+           document.getElementById("B_M_I").innerHTML = bmi;
+            if(bmi<16 ){
+                ketqua.innerHTML = "gầy độ 3";
+
+            }
+            else if (bmi < 17){
+                ketqua.innerHTML = "gầy độ 2";
+            }
+            else if(bmi < 18.5)
+            {
+                ketqua.innerHTML = "gầy độ 1";
+            }
+            else if(bmi < 25)
+            {
+                ketqua.innerHTML = "Bình Thươngg";
+            }
+            else if(bmi <= 30 && bmi <35)
+            {
+                ketqua.innerHTML ="Thừa cân";
+            }
+            else if(bmi < 35)
+            {
+                ketqua.innerHTML ="Béo phì 1";
+            }
+            else if( bmi < 40)
+            {
+                ketqua.innerHTML = "Béo phì 2";
+            }
+            else if(bmi > 40)
+            {
+                ketqua.innerHTML = "Béo phì 3";
+            }
+
+            else{
+                ketqua.innerHTML = "Nhập giá trị đi";
+            }
+        }
+        
+          
+        </script>
+        
+    </body>
+</html>

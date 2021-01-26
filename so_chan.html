@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    nhập một số:
+    <input type="text" id="nhap">
+    <button onclick="tinh_so_chan()">Xác thực</button>
+    <span id="kq"></span>
+    <script>
+        function tinh_so_chan(){
+            let input = Number(document.getElementById("nhap").value);
+            let outut = document.getElementById("kq");
+            if (input  %2== 0){
+                outut.innerHTML = "Đây là số chẳn"
+            }
+            else
+            {
+                outut.innerHTML = "Đây là số lẽ"
+            }
+        }
+    </script>
+</body>
+</html>

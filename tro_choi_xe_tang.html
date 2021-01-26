@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tank game</title>
+  <script src="cal.js"></script>
+</head>
+
+<body>
+  <div style="width: 190px; height: 190px; border: 1px solid black;" id="battleFiled">
+    <div
+      style="top: 19px; left: 38px;width: 19px; height: 19px; background-image: url(./img/tank-1.png);background-size: 100% 100%;position: relative;"
+      id="tank">
+    </div>
+    <div
+      style="top: 76px; left: 133px;width: 19px; height: 19px; background-image: url(./img/boom.png);background-size: 100% 100%;position: relative;"
+      id="boom">
+    </div>
+  </div>
+  <table>
+    <tr>
+      <td></td>
+      <td>
+        <button onclick="moveUp()" id="up">⬆</button>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <button onclick="moveLeft()" id="left">⬅</button>
+      <td></td>
+      <td>
+        <button onclick="moveRight()" id="right">➡</button>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button onclick="moveDown()" id="d">⬇</button>
+      <td></td>
+    </tr>
+  </table>
+
+  <script>
+    let x = 0, y = 0;
+    function moveUp() {
+        let tank = document.getElementById("tank");
+        let oldTop = parseInt(tank.style.top);
+        let newTop = oldTop - 10;
+        tank.style.top = newTop + "px";
+
+      }
+
+      function moveLeft() {
+        let tank = document.getElementById("tank");
+        let oldLeft = parseInt(tank.style.left);
+        let newLeft = oldLeft - 10;
+        tank.style.left = newLeft + "px";
+      }
+      function moveRight() {
+        let tank = document.getElementById("tank");
+        let oldRight = parseInt(tank.style.left);
+        let newRight = oldRight + 10;
+        tank.style.left = newRight + "px";
+      }
+      function moveDown() {
+        let tank = document.getElementById("tank");
+        let oldbut = parseInt(tank.style.top);
+        let newbut = oldbut + 10;
+        tank.style.top = newbut + "px";
+      }
+      function boom(){
+        let tank = document.getElementById("tank");
+        let boom = document.getElementById("boom");
+
+   
+      }
+  </script>
+
+</body>
+
+</html>
